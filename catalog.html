@@ -7,56 +7,34 @@
 </head>
 
 <body>
-  <header>
+  <header class="page-header">
     <a>
-      <p>Device</p>
+      <a href="index.html">Device</a>
     </a>
-
     <nav>
-      <ul>
-        <li>
-          <input type="search" id="site-search" name="search" placeholder="Поиск по сайту">
-        </li>
-        <li>
-          <a href="blank.html">Войти</a>
-        </li>
-        <li>
-          <a href="blank.html">Сравнить</a>
-        </li>
-        <li>
-          <a href="blank.html">Корзина</a>
-        </li>
-      </ul>
+      <form action="" method="get">
+        <button type="submit">Поиск</button>
+        <input type="search" id="site-search" name="search" placeholder="Поиск по сайту">
+      </form>
+      <a href="blank.html">Войти</a>
+      <a href="blank.html">Сравнить</a>
+      <a href="blank.html">Корзина</a>
     </nav>
     <nav>
       <ul>
         <li>
-          <label>
-            Каталог товаров <input type="button" value="+">
-          </label>
+          <a href="#">Каталог товаров</a><button type="submit">+</button>
           <ul>
-            <li>
-              Виртуальная реальность
-            </li>
-            <li>
-              Фитнес-браслеты
-            </li>
-            <li>
-              Квадрокоптер
-            </li>
-            <li>
-              Моноподы для селфи
-            </li>
-            <li>
-              Умные часы
-            </li>
-            <li>
-              Экшн-камеры
-            </li>
+            <li><a href="blank.html">Виртуальная реальность</a></li>
+            <li><a href="blank.html">Фитнес-браслеты</a></li>
+            <li><a href="blank.html">Квадрокоптер</a></li>
+            <li><a href="blank.html">Моноподы для селфи</a></li>
+            <li><a href="blank.html">Умные часы</a></li>
+            <li><a href="blank.html">Экшн-камеры</a></li>
           </ul>
         </li>
         <li>
-          <a href="blank/html">Доставка</a>
+          <a href="blank.html">Доставка</a>
         </li>
         <li>
           <a href="blank.html">Гарантия</a>
@@ -85,41 +63,37 @@
         </fieldset>
         <fieldset>
           <legend>Цвет</legend>
-          <ul>
-            <li>
-              <input type="checkbox" name="black" id="black" checked>
-              <label for="black">Чёрный</label>
-            </li>
-            <li>
-              <input type="checkbox" name="white" id="white">
-              <label for="white">Белый</label>
-            </li>
-            <li>
-              <input type="checkbox" name="blue" id="blue" checked>
-              <label for="blue">Синий</label>
-            </li>
-            <li>
-              <input type="checkbox" name="red" id="red" checked>
-              <label for="red">Красный</label>
-            </li>
-            <li>
-              <input type="checkbox" name="pink" id="pink">
-              <label for="pink">Розовый</label>
-            </li>
-          </ul>
+          <div>
+            <input type="checkbox" name="black" id="black" checked>
+            <label for="black">Чёрный</label>
+          </div>
+          <div>
+            <input type="checkbox" name="white" id="white">
+            <label for="white">Белый</label>
+          </div>
+          <div>
+            <input type="checkbox" name="blue" id="blue" checked>
+            <label for="blue">Синий</label>
+          </div>
+          <div>
+            <input type="checkbox" name="red" id="red" checked>
+            <label for="red">Красный</label>
+          </div>
+          <div>
+            <input type="checkbox" name="pink" id="pink">
+            <label for="pink">Розовый</label>
+          </div>
         </fieldset>
         <fieldset>
           <legend>Bluetooth</legend>
-          <ul>
-            <li>
-              <input type="radio" name="bluetooth-in" value="yes" id="bluetooth-yes">
-              <label for="bluetooth-yes">Есть</label>
-            </li>
-            <li>
-              <input type="radio" name="bluetooth-in" value="no" id="bluetooth-no">
-              <label for="bluetooth-yes">Нет</label>
-            </li>
-          </ul>
+          <div>
+            <input type="radio" name="bluetooth-in" value="yes" id="bluetooth-yes">
+            <label for="bluetooth-yes">Есть</label>
+          </div>
+          <div>
+            <input type="radio" name="bluetooth-in" value="no" id="bluetooth-no">
+            <label for="bluetooth-yes">Нет</label>
+          </div>
         </fieldset>
         <button type="submit">Показать</button>
       </form>
@@ -142,39 +116,31 @@
 
       <ul>
         <li>
+          <img src="img/catalog-img-1.jpg" alt="Любительская селфи-палка">
           <p>
-            <img src="img/catalog-img-1.jpg" alt="Любительская селфи-палка">
-          </p>
-          <p>
-            <span>Любительская селфи-палка</span>
-            <span>1 100 руб</span>
+          <h3>Любительская селфи-палка</h3>
+          <span>1 100 руб</span>
           </p>
         </li>
         <li>
+          <img src="img/catalog-img-2.jpg" alt="Профессиональная селфи-палка">
           <p>
-            <img src="img/catalog-img-2.jpg" alt="Профессиональная селфи-палка">
-          </p>
-          <p>
-            <span>Профессиональная селфи-палка</span>
-            <span>1 500 руб</span>
+          <h3>Профессиональная селфи-палка</h3>
+          <span>1 500 руб</span>
           </p>
         </li>
         <li>
+          <img src="img/catalog-img-3.jpg" alt="Непотопляемая селфи-палка">
           <p>
-            <img src="img/catalog-img-3.jpg" alt="Непотопляемая селфи-палка">
-          </p>
-          <p>
-            <span>Непотопляемая селфи-палка</span>
-            <span>1 500 руб</span>
+          <h3>Непотопляемая селфи-палка</h3>
+          <span>1 500 руб</span>
           </p>
         </li>
         <li>
+          <img src="img/catalog-img-4.jpg" alt="Селфи-палка «Следуй за мной»">
           <p>
-            <img src="img/catalog-img-4.jpg" alt="Селфи-палка «Следуй за мной»">
-          </p>
-          <p>
-            <span>Селфи-палка «Следуй за мной»</span>
-            <span>1 500 руб</span>
+          <h3>Селфи-палка «Следуй за мной»</h3>
+          <span>1 500 руб</span>
           </p>
         </li>
       </ul>
@@ -200,18 +166,15 @@
   </main>
 
 
-  <footer>
+  <footer class="page-footer">
     <p>Валентин Петухов</p>
-    <section>
-      <h2>Адрес</h2>
-      <p>DEVICE</p>
+    <div class="footer-adress">
+      <a href="index.html">DEVICE</a>
       <p>
         г. Москва, ул. Строителей, 15
       </p>
-      <div></div>
-    </section>
-    <section>
-      <h2>Навигация</h2>
+    </div>
+    <div class="services">
       <ul>
         <li>
           <a href="blank.html">Доставка</a>
@@ -234,8 +197,8 @@
           <a href="#">Твиттер</a>
         </li>
       </ul>
-    </section>
-    <section>
+    </div>
+    <div class="footer-nav-and-contacts">
       <h2>Навигация</h2>
       <ul>
         <li>
@@ -250,5 +213,5 @@
       </ul>
       <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       <a href="https://htmlacademy.ru/"><img src="img/html-academy-logo.png" alt="Логотип HTML-Academy"></a>
-    </section>
+      </sdiv>
   </footer>

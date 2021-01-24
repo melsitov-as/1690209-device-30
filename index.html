@@ -7,56 +7,33 @@
 </head>
 
 <body>
-  <header>
-    <a>
-      <p>Device</p>
-    </a>
 
+  <header class="page-header">
+    <p>Device</p>
     <nav>
-      <ul>
-        <li>
-          <input type="search" id="site-search" name="search" placeholder="Поиск по сайту">
-        </li>
-        <li>
-          <a href="blank.html">Войти</a>
-        </li>
-        <li>
-          <a href="blank.html">Сравнить</a>
-        </li>
-        <li>
-          <a href="blank.html">Корзина</a>
-        </li>
-      </ul>
+      <form method="get">
+        <button type="submit">Поиск</button>
+        <input type="search" id="site-search" name="search" placeholder="Поиск по сайту">
+      </form>
+      <a href="blank.html">Войти</a>
+      <a href="blank.html">Сравнить</a>
+      <a href="blank.html">Корзина</a>
     </nav>
     <nav>
       <ul>
         <li>
-          <label>
-            Каталог товаров <input type="button" value="+">
-          </label>
+          <a href="#">Каталог товаров</a><button type="submit">+</button>
           <ul>
-            <li>
-              Виртуальная реальность
-            </li>
-            <li>
-              Фитнес-браслеты
-            </li>
-            <li>
-              Квадрокоптер
-            </li>
-            <li>
-              Моноподы для селфи
-            </li>
-            <li>
-              Умные часы
-            </li>
-            <li>
-              Экшн-камеры
-            </li>
+            <li><a href="blank.html">Виртуальная реальность</a></li>
+            <li><a href="blank.html">Фитнес-браслеты</a></li>
+            <li><a href="blank.html">Квадрокоптер</a></li>
+            <li><a href="blank.html">Моноподы для селфи</a></li>
+            <li><a href="blank.html">Умные часы</a></li>
+            <li><a href="blank.html">Экшн-камеры</a></li>
           </ul>
         </li>
         <li>
-          <a href="blank/html">Доставка</a>
+          <a href="blank.html">Доставка</a>
         </li>
         <li>
           <a href="blank.html">Гарантия</a>
@@ -69,40 +46,20 @@
   </header>
 
   <main>
-    <section>
-      <!--тут по проекту будет слайдер, делаю section или лучше обернуть все в div, а в div уже будет section?-->
-      <div class="slider-item">
-        <!--Обернул в div, для разметки элементов в display:flex в будущем тут еще большая надпись 01 буду делать через position:absolute-->
-        <div class="slider-img">
-          <figure>
-            <img src="img/slider-img-1.png" width="384" height="486" alt="Изображение монопода">
-          </figure>
+    <section class="slider">
+      <h2>Слайдер с характеристиками</h2>
+      <div class="slider__inner">
+        <div class="slider-product__img">
+          <img src="img/slider-img-1.png" alt="Изображение селфи-палки">
         </div>
-        <!--slider__img-->
-        <div class="slider-features">
-          <div></div>
-          <!--этот div - это белая чёрточка в слайдере около большой надписи 01-->
-          <h1>Делай селфи, как Бен Стиллер!</h1>
-          <p>
+        <div class="slider-product__item">
+          <h2 class="slider-product__title">Делай селфи, как Бен Стиллер!</h2>
+          <p class="slider-product__text">
             Самая длинная палка для селфи доступна в нашем магазине.
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
-          <div class="slider-link-dots">
-            <div>
-              <a href="blank.html">Подробнее</a>
-            </div>
-            <div>
-              <!--оборачиваю в div для разметки в будущем display:flex-->
-              <ul>
-                <!--это кружочки, которые показывают, какая часть слайдера показывается-->
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-          </div>
-          <!--slider-link-dots-->
-          <table>
+          <a href="blank.html">Подробнее</a>
+          <table class="slider-product__features">
             <tr>
               <th>8,5 м</th>
               <th>5 кг</th>
@@ -115,46 +72,24 @@
             </tr>
           </table>
         </div>
-        <!--slider-features-->
+        <ul class="slider-dots">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
-      <!--slider-item-->
-      <p>01</p>
-    </section>
-
-    <section>
-      <!--тут по проекту будет слайдер, делаю section или лучше обернуть все в div, а в div уже будет section?-->
-      <div class="slider-item">
-        <!--Обернул в div, для разметки элементов в display:flex в будущем тут еще большая надпись 01 буду делать через position:absolute-->
-        <div class="slider-img">
-          <figure>
-            <img src="img/slider-img-2.png" width="345" height="485" alt="Изображение фитнес-браслета">
-          </figure>
+      <div class="slider__inner">
+        <div class="slider-product__img">
+          <img src="img/slider-img-2.png" alt="Изображение фитнес-браслета">
         </div>
-        <!--slider__img-->
-        <div class="slider-features">
-          <div></div>
-          <!--этот div - это белая чёрточка в слайдере около большой надписи 01-->
-          <h1>Худеем правильно!</h1>
-          <p>
+        <div class="slider-product__item">
+          <h2 class="slider-product__title">Худеем правильно!</h2>
+          <p class="slider-product__text">
             Мотивирующие фитнес-браслеты помогут найти в себе силы
             не пропускать занятия и соблюдать диету.
           </p>
-          <div class="slider-link-dots">
-            <div>
-              <a href="blank.html">Подробнее</a>
-            </div>
-            <div>
-              <!--оборачиваю в div для разметки в будущем display:flex-->
-              <ul>
-                <!--это кружочки, которые показывают, какая часть слайдера показывается-->
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-          </div>
-          <!--slider-link-dots-->
-          <table>
+          <a href="blank.html">Подробнее</a>
+          <table class="slider-product__features">
             <tr>
               <th>48 часов</th>
             </tr>
@@ -163,136 +98,122 @@
             </tr>
           </table>
         </div>
-        <!--slider-features-->
+        <ul class="slider-dots">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
-      <!--slider-item-->
-      <p>02</p>
-    </section>
-
-    <section>
-      <!--тут по проекту будет слайдер, делаю section или лучше обернуть все в div, а в div уже будет section?-->
-      <div class="slider-item">
-        <!--Обернул в div, для разметки элементов в display:flex в будущем тут еще большая надпись 01 буду делать через position:absolute-->
-        <div class="slider-img">
-          <figure>
-            <img src="img/slider-img-3.png" width="526" height="334" alt="Изображение квадрокоптера">
-          </figure>
+      <div class="slider__inner">
+        <div class="slider-product__img">
+          <img src="img/slider-img-3.png" alt="Изображение квадрокоптера">
         </div>
-        <!--slider__img-->
-        <div class="slider-features">
-          <div></div>
-          <!--этот div - это белая чёрточка в слайдере около большой надписи 01-->
-          <h1>Порхает как бабочка, жалит как пчела!</h1>
-          <p>
+        <div class="slider-product__item">
+          <h2 class="slider-product__title">Порхает как бабочка, жалит как пчела!</h2>
+          <p class="slider-product__text">
             Этот обычный, на первый взгляд, квадрокоптер оснащен
             мощным лазером, замаскированным под стандартную камеру.
           </p>
-          <div class="slider-link-dots">
-            <div>
-              <a href="blank.html">Подробнее</a>
-            </div>
-            <div>
-              <!--оборачиваю в div для разметки в будущем display:flex-->
-              <ul>
-                <!--это кружочки, которые показывают, какая часть слайдера показывается-->
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-          </div>
-          <!--slider-link-dots-->
-          <table>
+          <a href="blank.html">Подробнее</a>
+          <table class="slider-product__features">
             <tr>
-              <th>800 метров</th>
-              <th>50 метров</th>
+              <th>800 м</th>
+              <th>50 м</th>
             </tr>
             <tr>
-              <td>Дальность полета</td>
+              <td>Дальность полёта</td>
               <td>Радиус поражения</td>
             </tr>
           </table>
         </div>
-        <!--slider-features-->
+        <ul class="slider-dots">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
-      <!--slider-item-->
-      <p>03</p>
     </section>
+
+
+
 
     <section>
       <h2>Группы товаров</h2>
       <ul>
         <li>
           <img src="img/popular-img-1.svg" alt="Очки виртуальной реальности">
-          <p>Виртуальная реальность</p>
+          <a href="blank.html">Виртуальная реальность</a>
         </li>
         <li>
           <img src="img/popular-img-2.svg" alt="Монопод для селфи">
-          <p>Моноподы для селфи</p>
+          <a href="blank.html">Моноподы для селфи</a>
         </li>
         <li>
           <img src="img/popular-img-3.svg" alt="Экшн-камера">
-          <p>Экшн-камеры</p>
+          <a href="blank.html">Экшн-камеры</a>
         </li>
         <li>
           <img src="img/popular-img-4.svg" alt="Фитнес-браслет">
-          <p>Фитнес-браслеты</p>
+          <a href="blank.html">Фитнес-браслеты</a>
         </li>
         <li>
           <img src="img/popular-img-5.svg" alt="Умные часы">
-          <p>Умные часы</p>
+          <a href="blank.html">Умные часы</a>
         </li>
         <li>
           <img src="img/popular-img-6.svg" alt="Квадрокоптер">
-          <p>Квадрокоптеры</p>
+          <a href="blank.html">Квадрокоптеры</a>
         </li>
       </ul>
     </section>
 
-    <section>
-      <h2>Наши услуги</h2>
-      <nav>
+    <section class="accordion">
+      <h3>Наши услуги</h3>
+      <nav class="accordion__nav">
         <ul>
           <li><a href="blank.html">Доставка</a></li>
           <li><a href="blank.html">Гарантия</a></li>
           <li><a href="blank.html">Кредит</a></li>
         </ul>
       </nav>
-    </section>
-    <section>
-      <h2>Доставка</h2>
-      <p>
-        Мы с удовольствием доставим ваш товар прямо к вашему
-        подъезду совершенно бесплатно! Ведь мы неплохо
-        заработаем, поднимая его на ваш этаж.
-      </p>
-      <img src="img/services-img-1.png" alt="Курьер">
-    </section>
-    <section>
-      <h2>Гарантия</h2>
-      <p>
-        Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>Товар,
-        не дом, конечно же.
-      </p>
-      <img src="img/services-img-2.png" alt="Гарантия">
-    </section>
-    <section>
-      <h2>Кредит</h2>
-      <p>
-        Залезть в долговую яму стало проще! Кредитные консультанты
-        подберут для вас наиболее выгодные<br>
-        условия кредита. Выгодные для нашего банка, разумеется.
-      </p>
-      <img src="img/services-img-3.png" alt="Кредит">
+      <div class="accordion__inner">
+        <h2>Доставка</h2>
+        <p>
+          Мы с удовольствием доставим ваш товар прямо к вашему
+          подъезду совершенно бесплатно! Ведь мы неплохо
+          заработаем, поднимая его на ваш этаж.
+        </p>
+        <img src="img/services-img-1.png" alt="Курьер">
+      </div>
+
+      <div class="accordion__inner">
+        <h3>Гарантия</h3>
+        <p>
+          Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам
+          новый.<br>Товар,
+          не дом, конечно же.
+        </p>
+        <img src="img/services-img-2.png" alt="Гарантия">
+      </div>
+
+      <div class="accordion__inner">
+        <h3>Кредит</h3>
+        <p>
+          Залезть в долговую яму стало проще! Кредитные консультанты
+          подберут для вас наиболее выгодные<br>
+          условия кредита. Выгодные для нашего банка, разумеется.
+        </p>
+        <img src="img/services-img-3.png" alt="Кредит">
+      </div>
     </section>
 
     <section>
       <h2>Компании-партнёры</h2>
       <ul>
-        <li><img src="img/firm-logotype-1.png" alt="Логотип"></li>
-        <li><img src="img/firm-logotype-2.png" alt="Логотип"></li>
-        <li><img src="img/firm-logotype-3.png" alt="Логотип"></li>
-        <li><img src="img/firm-logotype-4.png" alt="Логотип"></li>
+        <li><a href="#"><img src="img/firm-logotype-1.png" alt="Логотип"></a></li>
+        <li><a href="#"><img src="img/firm-logotype-2.png" alt="Логотип"></a></li>
+        <li><a href="#"><img src="img/firm-logotype-3.png" alt="Логотип"></a></li>
+        <li><a href="#"><img src="img/firm-logotype-4.png" alt="Логотип"></a></li>
       </ul>
     </section>
 
@@ -313,7 +234,6 @@
       </ul>
       <a href="blank.html">Подробнее о нас</a>
     </section>
-
     <section>
       <h2>Контакты</h2>
       <p>
@@ -325,17 +245,14 @@
     </section>
   </main>
 
-  <footer>
-    <section>
-      <h2>Адрес</h2>
-      <p>DEVICE</p>
+  <footer class="page-footer">
+    <div class="footer-adress">
+      <a href="index.html">DEVICE</a>
       <p>
         г. Москва, ул. Строителей, 15
       </p>
-      <div></div>
-    </section>
-    <section>
-      <h2>Наши услуги</h2>
+    </div>
+    <div class="services">
       <ul>
         <li>
           <a href="blank.html">Доставка</a>
@@ -358,8 +275,8 @@
           <a href="#">Твиттер</a>
         </li>
       </ul>
-    </section>
-    <section>
+    </div>
+    <div class="footer-nav-and-contacts">
       <h2>Навигация</h2>
       <ul>
         <li>
@@ -374,7 +291,7 @@
       </ul>
       <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       <a href="https://htmlacademy.ru/"><img src="img/html-academy-logo.png" alt="Логотип HTML-Academy"></a>
-    </section>
+    </div>
   </footer>
 
   <section>
