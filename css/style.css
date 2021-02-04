@@ -46,28 +46,12 @@
   clip: rect(0 0 0 0);
 }
 
-html {
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 body {
-  min-width: 1200px;
-  margin: 0;
-  padding: 0;
-  padding-top: 40px;
-  overflow-x: hidden;
   font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
-  color: #464646;
+  color: var(--basic-black);
   letter-spacing: 0.01em;
   background-color: var(--basic-white);
 }
@@ -108,18 +92,10 @@ a {
   height: 36px;
 }
 
-
 .main-nav__user-item {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 27px;
-}
-
-.main-nav__search {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 440px;
 }
 
 .main-nav__search-label {
@@ -347,7 +323,6 @@ a {
   line-height: 20px;
 }
 
-
 /*promo-slider*/
 .promo-slider-img-wrap--01 img {
   width: 384px;
@@ -451,9 +426,12 @@ a {
 
 .main-goods__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-goods__item-wrap {
+  box-sizing: border-box;
   width: 160px;
   height: 160px;
   background-color: var(--special-yellow);
@@ -525,6 +503,10 @@ a {
 
 .main-goods__item-link:active .main-goods__item-img,
 .main-goods__item-link:active .main-goods__item-name {
+  opacity: 0.3;
+}
+
+.main-goods__item-name:active {
   opacity: 0.3;
 }
 
@@ -611,7 +593,7 @@ a {
 .services-accordion__control::before {
   content: "";
   position: absolute;
-  top: 62%;
+  top: 38%;
   left: 0;
   z-index: -1;
   width: 160px;
@@ -656,20 +638,21 @@ a {
 /*main-brands*/
 .main-brands__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-brands__link {
   display: block;
+  font-size: 0;
   width: 260px;
   height: 100px;
-
   opacity: 0.2;
 }
 
 .main-brands__link:hover,
 .main-brands__link:focus {
   opacity: 1;
-
   transition: all 0.3s linear;
 }
 
@@ -721,12 +704,12 @@ a {
 }
 
 .main-info__descr p {
-font-family: "Open Sans", Arial, sans-serif;
-font-style: normal;
-font-weight: 300;
-font-size: 15px;
-line-height: 28px;
-color: var(--basic-black);
+  font-family: "Open Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--basic-black);
 }
 
 .main-info__delivery-list {
@@ -769,12 +752,12 @@ color: var(--basic-black);
 }
 
 .main-contacts p {
-font-family: "Open Sans", Arial, sans-serif;
-font-style: normal;
-font-weight: 300;
-font-size: 15px;
-line-height: 28px;
-color: var(--basic-black);
+  font-family: "Open Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--basic-black);
 }
 
 .btn-about {
@@ -893,9 +876,8 @@ color: var(--basic-black);
   cursor: pointer;
 }
 
-.main-footer__logo a:hover {
+.main-footer__logo:hover {
   opacity: 0.6;
-
   transition: all 0.2s linear;
 }
 
@@ -905,6 +887,8 @@ color: var(--basic-black);
 
 .main-footer__user-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-footer__user-link {
@@ -978,7 +962,7 @@ color: var(--basic-black);
   color: var(--basic-white);
 }
 
-.main-footer__phone a {
+.main-footer__phone {
   font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -986,7 +970,6 @@ color: var(--basic-black);
   line-height: 20px;
   color: var(--basic-white);
 }
-
 
 .main-footer__services-link:hover,
 .main-footer__services-link:focus,
@@ -1004,8 +987,10 @@ color: var(--basic-black);
   opacity: 0.3;
 }
 
- .main-footer__social-list {
+.main-footer__social-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-footer__social-link {
@@ -1013,6 +998,7 @@ color: var(--basic-black);
   display: block;
   width: 32px;
   height: 32px;
+  font-size: 0;
 }
 
 .main-footer__social-link::before {
@@ -1038,7 +1024,6 @@ color: var(--basic-black);
 .main-footer__social-link:hover,
 .main-footer__social-link:focus {
   opacity: 0.6;
-
   transition: all 0.2s linear;
 }
 
@@ -1092,6 +1077,10 @@ color: var(--basic-black);
 .popup-write-us textarea:focus {
   background-color: var(--basic-white);
   border: 3px solid var(--special-yellow);
+}
+
+.popup-write-us input:invalid {
+  background-color: var(--unit-red); 
 }
 
 .btn-popup{
@@ -1184,7 +1173,6 @@ color: var(--basic-black);
 .popup-write-us__close:hover,
 .popup-map__close:hover {
   opacity: 1;
-
   transition: all 0.2s linear;
 }
 
