@@ -1,4 +1,3 @@
-/*fonts*/
 
 @font-face {
   font-weight: 800;
@@ -18,7 +17,6 @@
   url("../fonts/gilroylight.woff") format("woff");
 }
 
-/*variables*/
 :root {
   --basic-black: #000000;
   --basic-white: #ffffff;
@@ -35,7 +33,6 @@
   --grey-disabled: #a6a6a6;
 }
 
-/*global*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -61,34 +58,26 @@ a {
   text-decoration: none;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/*main-header*/
-
 .main-header {
   color: var(--basic-black);
   background-color: var(--special-yellow);
 }
 
-.main-header__logo a {
+.main-header__logo-link {
   cursor: pointer;
 }
 
-.main-header__logo a:hover,
-.main-header__logo a:focus {
+.main-header__logo-link:hover,
+.main-header__logo-link:focus {
   opacity: 0.6;
   transition: all 0.2 linear;
 }
 
-.main-header__logo a:active {
+.main-header__logo-link:active {
   opacity: 0.3;
 }
 
-.main-header__logo img {
+.main-header__logo-img {
   width: 164px;
   height: 36px;
 }
@@ -342,7 +331,6 @@ a {
   opacity: 0.3;
 }
 
-/*promo-slider*/
 .promo-slider-img-wrap--01 img {
   width: 384px;
   height: 486px;
@@ -441,8 +429,6 @@ a {
   transition: all 0.3s linear;
 }
 
-/*main-goods*/
-
 .main-goods__list {
   list-style: none;
   margin: 0;
@@ -538,8 +524,6 @@ a {
   letter-spacing: 0.05em;
   color: var(--basic-black);
 }
-
-/* services-accordion */
 
 .services-accordion-wrap {
   background-color: var(--basic-grey);
@@ -654,7 +638,6 @@ a {
   left: 0%;
 }
 
-/*main-brands*/
 .main-brands__list {
   list-style: none;
   margin: 0;
@@ -711,9 +694,7 @@ a {
   background-image: url("../img/main-brands-vive.png");
 }
 
-/* main-info-wrap */
-
-.main-info h3 {
+.main-info__title {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 47px;
@@ -722,7 +703,7 @@ a {
   color: var(--basic-black);
 }
 
-.main-info__descr p {
+.main-info__descr-text {
   font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
