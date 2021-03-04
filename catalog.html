@@ -141,7 +141,25 @@
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
               <fieldset class="filter__item  filter__item--price">
                 <legend class="filter__item-title">Стоимость</legend>
-                <span>Здесь будет ползунок с ценами</span>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar" style="width: 67%; margin-left: 0%"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
+                  </div>
+                  <div class="price-controls">
+                    <label class="min-price" style="margin-left: 0%">
+                      <span class="min-price__text">от</span>
+                      <input class="min-price__input" type="text" name="min-price" value="0">
+                    </label>
+                    <label class="max-price" style="margin-right: 39%">
+                      <span class="max-price__text">до</span>
+                      <input class="max-price__input" type="text" name="max-price" value="5000">
+                    </label>
+                  </div>
+                </div>
               </fieldset>
 
               <fieldset class="filter__item">
