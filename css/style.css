@@ -1760,7 +1760,8 @@ a {
 .popup-write-us {
   position: fixed;
   top: 236px;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
   width: 960px;
   height: 550px;
@@ -1967,7 +1968,8 @@ a {
 .popup-map {
   position: fixed;
   top: 236px;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
   display: none;
   width: 994px;
