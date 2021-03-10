@@ -16,6 +16,90 @@
   url("../fonts/gilroylight.woff") format("woff");
 }
 
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px) translate(-50%, -50%);
+            transform: translateY(-2000px) translate(-50%, -50%);
+  }
+  70% {
+    -webkit-transform: translateY(30px) translate(-50%, -50%);
+            transform: translateY(30px) translate(-50%, -50%);
+  }
+  90% {
+    -webkit-transform: translateY(-10px) translate(-50%, -50%);
+            transform: translateY(-10px) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: translateY(0) translate(-50%, -50%);
+            transform: translateY(0) translate(-50%, -50%);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px) translate(-50%, -50%);
+            transform: translateY(-2000px) translate(-50%, -50%);
+  }
+  70% {
+    -webkit-transform: translateY(30px) translate(-50%, -50%);
+            transform: translateY(30px) translate(-50%, -50%);
+  }
+  90% {
+    -webkit-transform: translateY(-10px) translate(-50%, -50%);
+            transform: translateY(-10px) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: translateY(0) translate(-50%, -50%);
+            transform: translateY(0) translate(-50%, -50%);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, -50%) translateX(0);
+            transform: translate(-50%, -50%) translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate(-50%, -50%) translateX(-10px);
+            transform: translate(-50%, -50%) translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate(-50%, -50%) translateX(10px);
+            transform: translate(-50%, -50%) translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, -50%) translateX(0);
+            transform: translate(-50%, -50%) translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate(-50%, -50%) translateX(-10px);
+            transform: translate(-50%, -50%) translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate(-50%, -50%) translateX(10px);
+            transform: translate(-50%, -50%) translateX(10px);
+  }
+}
+
 :root {
   --basic-black: #000000;
   --basic-white: #ffffff;
@@ -129,7 +213,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -411,7 +496,8 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .main-nav__link {
@@ -769,7 +855,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -806,7 +893,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -826,7 +914,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1444,7 +1533,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1604,7 +1694,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1699,7 +1790,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1758,16 +1850,34 @@ a {
 
 /*popup*/
 .popup-write-us {
+  display: none;
   position: fixed;
-  top: 236px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 10;
   width: 960px;
   height: 550px;
   background-color: var(--basic-white);
   -webkit-box-shadow: 0 10px 20px var(--popup-shadow);
           box-shadow: 0 10px 20px var(--popup-shadow);
+}
+
+.popup-write-us--active {
+  display: block;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+.popup-write-us--error {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 
 .popup-write-us__wrap {
@@ -1967,9 +2077,11 @@ a {
 
 .popup-map {
   position: fixed;
-  top: 236px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 10;
   display: none;
   width: 994px;
@@ -1977,6 +2089,10 @@ a {
   background-color: var(--basic-white);
   -webkit-box-shadow: 0 10px 20px var(--popup-map-shadow);
           box-shadow: 0 10px 20px var(--popup-map-shadow);
+}
+
+.popup-map--active {
+  display: block;
 }
 
 .popup-map__close {
@@ -2142,7 +2258,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
