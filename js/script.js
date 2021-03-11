@@ -41,6 +41,7 @@ popupWriteLink.addEventListener("click", function(evt){
 popupWriteClose.addEventListener("click", function(evt){
   evt.preventDefault();
   popupWrite.classList.remove("popup-write-us--active");
+  popupWrite.classList.remove("popup-write-us--error");
 })
 
 popupWriteForm.addEventListener("submit", function(evt){
